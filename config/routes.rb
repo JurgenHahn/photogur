@@ -1,6 +1,19 @@
 Rails.application.routes.draw do
+
+  resources: pictures
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  get 'images' => 'images#index'
-#why is index.html.erb the coresponding page for /images????
-#does this line of code set the view and call the index method both?
+  # root 'images#index'
+  # get 'images' => 'images#index'
+  # 
+  # post 'images' => 'images#create'
+  # get 'images/new' => 'images#new'
+  #
+  # get 'images/:id/edit' => "images#edit", as: 'edit_image'
+  # patch 'images/:id' => "images#update"
+  #
+  # get 'images/:id' => 'images#show', as: 'image'
+  # #find out what as: 'image'
+  #
+  # delete 'images/:id' => 'images#destroy', as: 'delete_image'
+
 end
