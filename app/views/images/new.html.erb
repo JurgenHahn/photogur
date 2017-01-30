@@ -1,6 +1,11 @@
-<h1>Add an image</h1>
-<%= link_to "Back to Images", images_url %>
+<h1 class="title">Add an Image</h1>
 
+
+<section class="home-button"><%= link_to "Home", images_url %></section>
+
+<!-- #where is it implied that this form is posted to images -->
+
+<section class="form">
 <%= form_for @image do |f| %>
   <p>
     <%= f.label :artist %><br>
@@ -14,10 +19,11 @@
 
   <p>
     <%= f.label :url %><br>
-    <%= f.text_field :url %>
+    <%= f.text_field :url %><br><br><br>
   </p>
 
   <p>
     <%= submit_tag "Save" %>
   </p>
 <% end %>
+</section>

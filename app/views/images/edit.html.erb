@@ -1,10 +1,11 @@
-<h1>Edit Picture</h1>
+<h1 class="title">Edit Picture</h1>
 
 <p>
-  <%= link_to "Back", @image %>
+  <section class="back"><%= link_to "Back", @image %></section>
 </p>
 
-<%= form_for @image do |f| %>
+<!-- #where is it stating this is being patched to images/:id? -->
+<section class="form"><%= form_for @image do |f| %>
   <p>
     <%= f.label :artist %><br>
     <%= f.text_field :artist %>
@@ -15,9 +16,10 @@
   </p>
   <p>
     <%= f.label :url %><br>
-    <%= f.text_field :url %>
+    <%= f.text_field :url %><br><br><br>
   </p>
   <p>
     <%= f.submit %>
   </p>
 <% end %>
+</section>
