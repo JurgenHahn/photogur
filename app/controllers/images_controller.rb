@@ -1,8 +1,7 @@
 class ImagesController < ApplicationController
   def index
-    @images = Image.all
-    #rails will by default render views/images/index.html.erb
-    #this variable can be used in the view even though it is defined in the controller
+    # @images = Image.all
+    @most_recent_images = Image.most_recent_five
   end
 
   def show
@@ -16,7 +15,7 @@ class ImagesController < ApplicationController
   def create
     @image = Image.new(image_params)
       if @image.save
-        redirect_to images_url
+        redirect_to root_url
       else
       render :new
     end
@@ -25,10 +24,11 @@ class ImagesController < ApplicationController
   def destroy
     @image = Image.find(params[:id])
     @image.destroy
-    redirect_to images_url
+    redirect_to root_url
   end
 
   def edit
+
     @image = Image.find(params[:id])
   end
 

@@ -1,14 +1,18 @@
 <!-- #this is what gets rendered at /index -->
-<h1 class="title">Images</h1>
+<h1 class="title">Most Recent Images</h1>
 
   <section class="image-container">
 
+    <ul>
+      <% @most_recent_images.each do |image| %>
+        <li><%=image.title %></li>
+      <% end %>
+    </ul>
 
-      <% @images.each do |image| %>
-      <div class="img">
-        <%= link_to image_tag(image.url), "/images/#{image.id}" %>
+      <!-- <div class="img">
+        <%= link_to image_tag(image.url), image_path(image) %>
         <p class="image-details"><%= image.title %>, <%= image.artist %></p>
         </div>
-      <% end %>
+      <% end %> -->
 
 </section>

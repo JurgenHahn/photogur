@@ -205,11 +205,13 @@ image {
   display: inline-block;
   margin: 5px;
   position: relative;
+
 }
 
 img {
-  height: 250px;
-  max-width: 100%;
+  max-width: 250px;
+  height: 200px;
+  object-fit: cover;
 }
 
 .image-details {
@@ -227,6 +229,7 @@ img {
 
 .ind-image img {
   height: 450px;
+  max-width: 100%;
   padding: 0 0 20px 0;
 }
 
