@@ -2,6 +2,7 @@ class ImagesController < ApplicationController
   def index
     # @images = Image.all
     @most_recent_images = Image.most_recent_five
+    @images_1_month = Image.created_before(1.day.ago)
   end
 
   def show

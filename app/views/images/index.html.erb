@@ -3,16 +3,21 @@
 
   <section class="image-container">
 
-    <ul>
-      <% @most_recent_images.each do |image| %>
-        <li><%=image.title %></li>
-      <% end %>
-    </ul>
 
-      <!-- <div class="img">
+      <% @most_recent_images.each do |image| %>
+      <div class="img">
         <%= link_to image_tag(image.url), image_path(image) %>
         <p class="image-details"><%= image.title %>, <%= image.artist %></p>
         </div>
-      <% end %> -->
+      <% end %>
+
+
 
 </section>
+
+<% @images_1_month.each do |image| %>
+<div class="img">
+  <%= link_to image_tag(image.url), image_path(image) %>
+  <p class="image-details"><%= image.title %>, <%= image.artist %></p>
+  </div>
+<% end %>
